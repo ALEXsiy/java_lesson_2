@@ -14,23 +14,30 @@ public class test_2 {
         c=in.nextInt(); //считал с
         in.close();
 
-        boolean fl= false; //флаг, отвечающий за наличие числа кратного 5
+        boolean fl =false;
         //Проверка чисел на кратность 5
+        String a_=new String();
+        String b_ =new String();
+        String c_ =new String();
+        String st_fl_ =new String();
         if(a%5==0){
-            System.out.printf("a=%d\n",a);
-            fl=true;
+             a_ ="a="+a+";";
+             fl=true;
         }
         if(b%5==0){
-            System.out.printf("b=%d\n",b);
+            b_="b="+b+";";
             fl=true;
         }
         if(c%5==0){
-            System.out.printf("c=%d\n",c);
-            fl=true;
+           c_ = "c="+c+";";
+           fl=true;
         }
         //Проверка наличия числа кратного 5
         if(!fl)
-            System.out.print("Нет значений кратных 5! \n");
+            st_fl_="Нет значений кратных 5!";
+
+        String res_str = String.join(" ",a_,b_,c_,st_fl_ );
+        System.out.println( res_str);
 
         System.out.println("Int(a/b): "+(a/b)); //Вывел на консоль значение от целочисленного деления a на b (результат - целое число)
         System.out.println("Double(a/b): "+((double)a/b)); //Вывел на консоль значение от деления a на b (результат - число с плавающей запятой)
